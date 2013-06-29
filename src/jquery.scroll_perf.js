@@ -10,7 +10,7 @@
 (function($) {
 
     "use strict";
-    
+
     // RequestAnimationFrame from Paul Irish : http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/
     window.requestAnimFrame = (function(){
       return  window.requestAnimationFrame       ||
@@ -38,16 +38,20 @@
         },
 
         loop: function() {
+            var i,
+                registeredEl;
+
             // Looping threw each registered elements and test scrollTop
-            for (var i in $special.registered) {
+            for (i in $special.registered) {
+                registeredEl = $special.registered[i];
 
                 // Getting scrollTop value
-                scrollTop = $special.registered[i].$el.scrollTop();
+                scrollTop = registeredEl.$el.scrollTop();
 
-                // Testing value
-                if ( scrollTop !== $special.registered[i].top ) {
-                    $special.registered[i].top = scrollTop;
-                    $special.registered[i].$el.trigger('scroll_perf');
+                // Testing scrollTop and registeredEl.top are not equal
+                if ( scrollTop ^ registeredEl.top ) {
+                    registeredEl.top = scrollTop;
+                    registeredEl.$el.trigger('scroll_perf');
                 }
             }
 
