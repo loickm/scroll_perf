@@ -53,3 +53,7 @@ For example with a 30ms delta :
         outTimestamp = event.timestamp;
     });
 
+
+## License
+
+Released under the MIT Licence

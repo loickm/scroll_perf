@@ -4,6 +4,7 @@
  * latest version and complete README available on Github:
  * https://github.com/Sirk/scroll_perf
  *
+ * Released under the MIT Licence
  *
  * Inspired by LouisRemi jquery-smartresize : https://github.com/louisremi/jquery-smartresize
  */
