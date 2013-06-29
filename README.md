@@ -4,9 +4,9 @@
 
 `scroll` event in Javascript is pretty slow, especially when you need to do big calculations at each time the user scroll the window or a scrollable zone.
 
-This small jQuery Plugin allow you to use a `scroll_perf` event despite of the classic `scroll` event
+This lightweight jQuery Plugin allow you to use a `scroll_perf` event despite of the classic `scroll` event.
 
-The `scroll_perf` event use the power of **requestAnimationFrame** to notify you when your window or your `overflow-y:auto;` divs are scrolled.
+The `scroll_perf` event use the power of **requestAnimationFrame** to notify you when your window or your `overflow-y:auto;` divs are scrolled. All of this in less than 1kb minified.
 
 
 
