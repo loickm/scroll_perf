@@ -1,13 +1,16 @@
 /*
- * scroll_perf: special jquery plugin for using requestAnimationFrame for scrolling events
+ * scroll_perf: special jquery plugin using requestAnimationFrame for scrolling events
  *
  * latest version and complete README available on Github:
- * https://github.com/
+ * https://github.com/Sirk/scroll_perf
  *
  *
+ * Inspired by LouisRemi jquery-smartresize : https://github.com/louisremi/jquery-smartresize
  */
 (function($) {
 
+    "use strict";
+    
     // RequestAnimationFrame from Paul Irish : http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/
     window.requestAnimFrame = (function(){
       return  window.requestAnimationFrame       ||
