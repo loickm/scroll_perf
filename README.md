@@ -2,18 +2,18 @@
 
 
 
-Scroll event in Javascript is absolutely slow, especially with the touch mouses that triggers too much events for the browser.
+`scroll` event in Javascript is pretty slow, especially when you need to do big calculations at each time the user scroll the window or a scrollable zone.
 
 This small jQuery Plugin allow you to use a `scroll_perf` event despite of the classic `scroll` event
 
-The `scroll_perf` event use the power of requestAnimationFrame to notify you when your window or your `overflow-y:auto;` divs.
+The `scroll_perf` event use the power of **requestAnimationFrame** to notify you when your window or your `overflow-y:auto;` divs are scrolled.
 
 
 
 
 ## Binding / Unbinding
 
-Simply bind your event as you do everytime?
+Simply bind your event as you do everytime.
 
     $(window).on('scroll_perf', function(event) {
         // Do something there with event.scrollTop
@@ -23,7 +23,7 @@ Simply bind your event as you do everytime?
         // Do something there with event.scrollTop
     }); 
 
-You can to use the delegate options
+You can to use too the delegate options
     
     $('body').on('scroll_perf', '.scrollable', function(event) {
         // Do something there with event.scrollTop
@@ -32,9 +32,9 @@ You can to use the delegate options
     
 ## event.scrollTop
 
-In you callback method, the event params already contains a `event.scrollTop` value as the plugin verify if the `scrollTop` value has been changed.
+In you callback method, the event parameter already contains a `event.scrollTop` value.
 
-For preventing you to get reflows and bad performances, you should absolutely not re-ask to the browser the scroll offset with `$(element).scrollTop()` for example.
+For prevent you to get reflows and bad performances, you must absolutely not re-ask the browser the scroll offset with `$(element).scrollTop()` for example.
 
 
 
